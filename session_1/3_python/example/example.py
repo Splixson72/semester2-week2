@@ -108,6 +108,8 @@ def view_student_by_course(db):
     for student in cursor:
         print(f"Name: {student[0]}")
 
+
+# Have a go at writing this function!
 def review_student_numbers(db):
     '''
     Print the number of students registered for each course.    
