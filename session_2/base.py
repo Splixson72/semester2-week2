@@ -15,7 +15,14 @@ def get_connection(db_path="orders.db"):
 def main():
 
     db = get_connection()
-
+    cursor = db.execute("SELECT category FROM products")
+    for i in range[cursor]
+        print(cursor[i])
+    cursor = db.execute("SELECT COUNT(customer_id) FROM customers")
+    print cursor
+    db.execute(SELECT product_id FROM products WHERE price < 2)
+    for i in range[cursor]
+        print(cursor[i])
     db.close()
 
 
