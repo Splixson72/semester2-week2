@@ -1,9 +1,9 @@
 import sqlite3
 # you will need to pip install pandas matplotlib
-import pandas as pd
-import matplotlib as mpl
+#--import pandas as pd
+#import matplotlib as mpl
 
-def get_connection(db_path="orders.db"):
+def get_connection(db_path="/workspaces/semester2-week2/session_2/orders.db"):
     """
     Establish a connection to the SQLite database.
     Returns a connection object.
@@ -15,14 +15,17 @@ def get_connection(db_path="orders.db"):
 def main():
 
     db = get_connection()
-    cursor = db.execute("SELECT category FROM products")
-    for i in range[cursor]
-        print(cursor[i])
-    cursor = db.execute("SELECT COUNT(customer_id) FROM customers")
-    print cursor
-    db.execute(SELECT product_id FROM products WHERE price < 2)
-    for i in range[cursor]
-        print(cursor[i])
+    query = '''SELECT * FROM products'''
+    cursor = db.execute(query)
+    for each in cursor:
+        print(each)
+    #query = '''SELECT COUNT(customer_id) FROM customers'''
+    #cursor = db.execute(query)
+    #print(cursor)
+    #query = '''SELECT product_id FROM products WHERE price < 2'''
+    #db.execute(query)
+    #for each in cursor:
+    #    print(each)
     db.close()
 
 
